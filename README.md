@@ -4,6 +4,28 @@
 2. Хорошо - 1, 2 модуль
 3. Отлично - 1, 2 и 3 модуль
 
+### Настройка проекта
+
+1. Создание виртуальной среды
+
+- Linux
+```commandline
+    python3 -m venv .venv
+    source .venv/bin/activate
+```
+
+- Windows
+```commandline
+py -m venv .venv
+.venv/scripts/activate
+```
+
+2. Установка зависимостей
+
+```commandline
+pip install requirements.txt
+```
+
 #### **Модуль 1. Разработка базы данных средствами СУБД**
 
 **Задание:**
