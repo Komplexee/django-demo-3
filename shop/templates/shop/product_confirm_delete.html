@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Удаление товара{% endblock %}
+
+{% block content %}
+    <h1>Удаление товара</h1>
+    {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        <a href="{% url 'product_list' %}" class="btn btn-secondary">Назад к списку товаров</a>
+    {% else %}
+        <p>Вы уверены, что хотите удалить товар "{{ product.name }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Удалить</button>
+            <a href="{% url 'product_list' %}" class="btn btn-secondary">Отмена</a>
+        </form>
+    {% endif %}
+{% endblock %}
